@@ -11,7 +11,7 @@ class MazeGen():
         self.height = height
         self.seed = 1
 
-        self.empty = " "
+        self.empty = "x"
         self.mark = "@"
         self.wall = chr(9608)
         self.north, self.south, self.east, self.west = "n", "s", "e", "w"
