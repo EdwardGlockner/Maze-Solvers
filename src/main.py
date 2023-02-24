@@ -1,6 +1,14 @@
-from pyamaze import maze, agent
-m = maze(30, 40)
-m.CreateMaze()
-a = agent(m, filled=True, footprints=True)
-m.tracePath({a:m.path})
-m.run()
+import sys
+import os 
+
+sys.path.append(str(sys.path[0][:-14]))
+dirname = os.getcwd()
+sys.path.insert(1, os.path.join(dirname))
+
+from MazeGen import MazeGen
+
+Maze = MazeGen(width=15, height=15)
+hasVisited = [(1,1)]
+Maze.visit(1,1, hasVisited)
+Maze.print_maze()
+
