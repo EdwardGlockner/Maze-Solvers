@@ -6,9 +6,27 @@ dirname = os.getcwd()
 sys.path.insert(1, os.path.join(dirname))
 
 from MazeGen import MazeGen
+from Graphics import Graphics
 
-Maze = MazeGen(width=40, height=40)
+###
+Maze = MazeGen(width=10, height=10)
 hasVisited = [(1,1)]
 Maze.visit(1,1, hasVisited)
-Maze.print_maze()
+#Maze.print_maze()
+#print(Maze.maze)
+
+###
+Graphics = Graphics()
+
+def main():
+    #while True:
+     #   Graphics.redraw_window()
+     pass
+
+
+if __name__ == "__main__":
+    main()
+
+
+
 

@@ -43,8 +43,8 @@ class MazeGen():
 
         """
         self.maze[(x,y)] = self.empty
-        self.print_maze(x,y)
-        print("\n\n")
+        #self.print_maze(x,y)
+        #print("\n\n")
 
         while True:
             # Check which neighboring spaces adjacent to
