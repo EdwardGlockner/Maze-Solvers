@@ -14,12 +14,11 @@ from MazeGen import MazeGen
 """
 
 class Graphics():
-    def __init__(self, win_width = 800, win_height = 800, width = 15, height = 15):
+    def __init__(self, width = 15, height = 15):
         """
 
 
         """
-
         # Define colors
         self.BLACK = (0, 0, 0)
         self.WHITE = (255, 255, 255)
@@ -27,12 +26,11 @@ class Graphics():
         self.RED = (255, 0, 0)
         
         # Define properties of the 2D array
-        #self.win_width = win_width
-        #self.win_height = win_height
-        self.win_width = 50*width
-        self.win_height = 50*height
+        self.cell_size = 50
         self.width = width
         self.height = height
+        self.win_width = self.cell_size*self.width
+        self.win_height = self.cell_size*self.height
         self.margin = 5 # Margin between each cell
 
         # Define properties of the window
@@ -42,12 +40,12 @@ class Graphics():
 
         # Define the maze object
         self.maze = MazeGen()
+        print(type(self.maze))
 
-
-        # Testing
+        # Testing, but iterate over the self.maze object
         for x in range(0, self.width, 2):
             for y in range(0, self.width, 2):
-                pygame.draw.rect(self.win, self.WHITE, (x*50, y*50, 50, 50))
+                pygame.draw.rect(self.win, self.WHITE, (x*self.cell_size, y*self.cell_size, self.cell_size, self.cell_size))
 
     def __redraw_window(self):
         """

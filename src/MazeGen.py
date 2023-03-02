@@ -94,5 +94,8 @@ class MazeGen():
                 hasVisited.append((nextX, nextY)) # Mark as visited.
                 self.visit(nextX, nextY, hasVisited) # Recursively visit this space.
 
+
+            # here update the graphics
+
         
 
