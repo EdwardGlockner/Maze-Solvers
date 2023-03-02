@@ -16,13 +16,10 @@ Maze.visit(1,1, hasVisited)
 #print(Maze.maze)
 
 ###
-Graphics = Graphics()
 
 def main():
-    #while True:
-     #   Graphics.redraw_window()
-     pass
-
+    Window = Graphics()
+    Window.run_simulation()
 
 if __name__ == "__main__":
     main()
