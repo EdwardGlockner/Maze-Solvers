@@ -9,7 +9,7 @@ sys.path.append(str(sys.path[0][:-14]))
 dirname = os.getcwd()
 sys.path.insert(1, os.path.join(dirname))
 
-#----------------------------------------------------------+
+#--LOCAL IMPORTS-------------------------------------------+
 from MazeGen import MazeGen
 
 """
@@ -17,7 +17,7 @@ from MazeGen import MazeGen
 """
 
 class Graphics():
-    def __init__(self, width = 50, height = 50):
+    def __init__(self, width = 70, height = 70):
         """
 
 
