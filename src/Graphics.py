@@ -10,7 +10,7 @@ dirname = os.getcwd()
 sys.path.insert(1, os.path.join(dirname))
 
 #--LOCAL IMPORTS-------------------------------------------+
-from MazeGen import MazeGen
+from MazeGenV2 import MazeGen
 
 """
 
@@ -44,8 +44,9 @@ class Graphics():
 
         # Define the maze object
         self.MazeObj = MazeGen(self.width, self.height)
-        hasVisited = [(1,1)]
-        self.MazeObj.visit(1,1, hasVisited)
+        #hasVisited = [(1,1)]
+        #self.MazeObj.visit(1,1, hasVisited)
+        self.MazeObj.generate()
 
         # Testing, but iterate over the self.maze object
         
@@ -71,8 +72,9 @@ class Graphics():
             for y in range(0, self.height, 1):
                 rect = pygame.Rect(x*self.cell_size, y*self.cell_size, \
                                    self.cell_size, self.cell_size)
-                if self.MazeObj.maze[(x,y)] == "wall":
-                    pygame.draw.rect(self.win, self.BLACK, rect, 0)
+                #if self.MazeObj.maze[(x,y)] == "wall":
+                if self.MazeObj.maze[y][x] == "wall":
+                    pygame.draw.rect(self.win, self.RED, rect, 0)
                 else:
                     pygame.draw.rect(self.win, self.WHITE, rect, 0)
 

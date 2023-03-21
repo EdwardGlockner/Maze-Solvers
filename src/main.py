@@ -5,7 +5,7 @@ sys.path.append(str(sys.path[0][:-14]))
 dirname = os.getcwd()
 sys.path.insert(1, os.path.join(dirname))
 
-from MazeGen import MazeGen
+from MazeGenV2 import MazeGen
 from Graphics import Graphics
 
 ###
